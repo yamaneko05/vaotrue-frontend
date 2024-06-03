@@ -15,7 +15,7 @@ export default async function Page() {
     <div className="p-4 w-full max-w-[720px] mx-auto">
       <div className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">記事一覧</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-        {[...posts, ...posts, ...posts].map((post: any) => (
+        {posts.map((post: any) => (
           <div className="col-span-1" key={post.id}>
             <Link href={`/posts/${post.id}`}>
               <div className="sm:text-xl font-bold">{post.attributes.title}</div>

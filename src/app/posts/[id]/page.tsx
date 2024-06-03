@@ -2,7 +2,7 @@ import { prettyDate } from "@/lib/utils";
 import Markdown from "react-markdown";
 
 async function getPost(id: string) {
-  return fetch(`http://localhost:1337/api/posts/${id}?populate=*`, { cache: "no-cache" })
+  return fetch(`http://localhost:1337/api/posts/${id}?populate=*`)
   .then(res => res.json())
   .then(json => json.data);
 }
